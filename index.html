@@ -181,6 +181,23 @@
             background: #0052a3;
         }
 
+        .download-btn {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+        }
+
         .social-links {
             display: flex;
             gap: 1rem;
@@ -247,6 +264,10 @@
             or Data Analyst, where I can help organizations make smarter, data-informed decisions.
         </p>
         <div class="social-links">
+            <a href="https://github.com/megansin" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/megan-sin" target="_blank">LinkedIn</a>
+        </div>
+        <div class="resume">
             <a href="https://github.com/megansin" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/megan-sin" target="_blank">LinkedIn</a>
         </div>
@@ -344,26 +365,46 @@
 
     <section id="resume">
         <h2>Resume</h2>
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="resume.pdf" download class="download-btn">
+                📄 Download Full Resume (PDF)
+            </a>
+        </div>
         
         <div class="resume-section">
             <h3>Work Experience</h3>
             
             <div class="job">
-                <h4>Senior Web Developer - Tech Company Inc.</h4>
-                <p class="date">January 2022 - Present</p>
+                <h4>Services Solutions Architect II  - Dell Technologies</h4>
+                <p class="date">July 2024 - Present</p>
+                <ul>
+                    <li>Led complex AI-focused presales and RFP efforts by structuring ambiguous requirements, tracking owners and deadlines, and coordinating cross-functional stakeholders to deliver high-quality responses on time</li>
+                    <li>Accelerated deal closure by analyzing customer needs and constraints, and producing clear SOW under tight timelines</li>
+                    <li>Improved pipeline accuracy and executive visibility by auditing and updating deal records, reconciling discrepancies, and presenting status and escalation updates in recurring pipeline reviews</li>
+                </ul>
                 <p>Leading development of client-facing web applications, mentoring junior developers, and implementing best practices for code quality and performance.</p>
             </div>
             
             <div class="job">
-                <h4>Web Developer - Digital Agency</h4>
-                <p class="date">June 2020 - December 2021</p>
-                <p>Developed responsive websites for various clients, collaborated with design teams, and optimized site performance for improved user experience.</p>
+                <h4>Data Science Summer Analyst - JPMorgan Chase & Co.</h4>
+                <p class="date">June 2023 - August 2023</p>
+                <ul>
+                    <li>Reduced stakeholder inquiry response time by 10x by aggregating transactional data on customer spending, point redemption, and ad interactions using SQL</li>
+                    <li>Centralized 200+ customer behavior metrics from 15 data sources into a single unified table, reducing query time by 90%</li>
+                    <li>Accelerated Teradata-to-Snowflake migration by documenting 150+ legacy schemas in a centralized data dictionary, ensuring 100\% metadata accuracy for downstream analytics teams</li>
+                    <li>Interviewed executives and analysts to identify five KPIs and preferred visualizations aligned with business needs</li>
+                </ul>
             </div>
             
             <div class="job">
-                <h4>Junior Developer - Startup Co.</h4>
-                <p class="date">January 2019 - May 2020</p>
-                <p>Assisted in building web applications, wrote clean and maintainable code, and participated in agile development processes.</p>
+                <h4>HR and Community Relations Analyst Intern - The Hanover Insurance Group</h4>
+                <p class="date">June 2021 - August 2022</p>
+                <ul>
+                    <li>Boosted job posting engagement by 25% by analyzing peak engagement times and outreach effectiveness using Power BI</li>
+                    <li>Built Excel forecasting models to predict demographic changes, influencing DEI strategy with actionable insights</li>
+                    <li>Modeled CEO matching strategies for corporate giving campaign in Excel, forecasting participation and overall success</li>
+                    <li>Managed logistics and communications for two company events, cultivating high attendee satisfaction and engagement</li>
+                </ul>
             </div>
         </div>
 
@@ -371,25 +412,28 @@
             <h3>Education</h3>
             
             <div class="education">
-                <h4>Bachelor of Science in Computer Science</h4>
-                <p class="date">University Name, 2015 - 2019</p>
-                <p>Graduated with honors. Focused on software engineering, algorithms, and web development.</p>
+                <h4>Master of Science in Data Science</h4>
+                <p class="date">Worcester Polytechnic Institute, 2023 - 2024</p>
+            </div>
+            <div class="education">
+                <h4>Bachelor of Science in Data Science</h4>
+                <p class="date">Worcester Polytechnic Institute, 2020 - 2024</p>
+                <p>Graduated with high distinction. GPA: 4.0/4.0</p>
             </div>
         </div>
 
         <div class="resume-section">
             <h3>Skills</h3>
-            <p><strong>Languages:</strong> JavaScript, TypeScript, Python, HTML, CSS</p>
-            <p><strong>Frameworks:</strong> React, Vue.js, Node.js, Express, Next.js</p>
-            <p><strong>Tools:</strong> Git, Docker, AWS, MongoDB, PostgreSQL</p>
-            <p><strong>Other:</strong> Responsive Design, REST APIs, Agile/Scrum, UI/UX Design</p>
+            <p><strong>Languages:</strong> Python, SQL (PostgreSQL, MySQL), Java, R, LaTeX, JavaScript, HTML/CSS</p>
+            <p><strong>Libraries:</strong> scikit-learn, pandas, matplotlib, ggplot, PyTorch, nltk, BeautifulSoup, D3.js</p>
+            <p><strong>Tools:</strong> Tableau, Power BI, Excel, Teradata, MongoDB, Amazon SageMaker, Git, Bitbucket, Docker, Hadoop</p>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="contact-form">
-            <form id="contactForm">
+            <form id="contactForm" action="https://formspree.io/f/mdaawaga" method="POST"></form>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
