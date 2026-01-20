@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megan Sin - Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
@@ -72,6 +73,20 @@
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: #0066cc;
+        }
+
+        li {
+            margin-left: 30px;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: 5px solid #fff;
         }
 
         .hero {
@@ -251,6 +266,7 @@
     </nav>
 
     <section id="about" class="hero">
+        <img src="headshot.jpeg" alt="Megan Sin" class="profile-picture">
         <h1>Megan Sin</h1>
         <p>Data Scientist | Solutions Architect | Storyteller</p>
         <p style="margin-top: 2rem;">
@@ -264,10 +280,6 @@
             or Data Analyst, where I can help organizations make smarter, data-informed decisions.
         </p>
         <div class="social-links">
-            <a href="https://github.com/megansin" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/megan-sin" target="_blank">LinkedIn</a>
-        </div>
-        <div class="resume">
             <a href="https://github.com/megansin" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/megan-sin" target="_blank">LinkedIn</a>
         </div>
@@ -365,7 +377,7 @@
 
     <section id="resume">
         <h2>Resume</h2>
-        <div style="text-align: center; margin: 2rem 0;">
+        <div style="text-align: center;">
             <a href="resume.pdf" download class="download-btn">
                 📄 Download Full Resume (PDF)
             </a>
@@ -467,8 +479,24 @@
         // Form submission handler
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Show confirmation message
+            const formContainer = document.querySelector('.contact-form');
+            formContainer.innerHTML = `
+                <div style="text-align: center; padding: 3rem; background: #f8f9fa; border-radius: 10px;">
+                    <h3 style="color: #0066cc; margin-bottom: 1rem;">✓ Message Sent!</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Thank you for reaching out, ${name}! I'll get back to you soon at ${email}.</p>
+                    <button onclick="location.reload()" style="background: #0066cc; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Send Another Message</button>
+                </div>
+            `;
+            
+            // Log the form data (in a real implementation, this would be sent to a server)
+            console.log('Form submitted:', { name, email, message });
         });
     </script>
 </body>
